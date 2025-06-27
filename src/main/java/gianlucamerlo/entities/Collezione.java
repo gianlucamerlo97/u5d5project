@@ -1,13 +1,13 @@
 package gianlucamerlo.entities;
 
-public abstract class Gioco {
+public  abstract class Collezione {
     private final int idGioco;
     private String titolo;
     private int annoDiPubblicazione;
     private int price;
 
 
-    public Gioco(final int idGioco,String titolo, int annoDiPubblicazione,int price){
+    public Collezione(final int idGioco,String titolo, int annoDiPubblicazione,int price){
         this.idGioco=idGioco;
         this.titolo=titolo;
         this.annoDiPubblicazione=annoDiPubblicazione;

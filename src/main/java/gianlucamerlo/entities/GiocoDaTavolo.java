@@ -1,11 +1,13 @@
 package gianlucamerlo.entities;
 
-public class GiocoDaTavolo {
+public class GiocoDaTavolo extends Collezione{
     private int numGiocatori;
     private int averageLenghtOfAMatch;
 
 
-    public GiocoDaTavolo(int numGiocatori,int averageLenghtOfAMatch){
+    public GiocoDaTavolo(int numGiocatori,String titolo,int idGioco,int annodiPubblicazione,int price,int averageLenghtOfAMatch)
+    {
+        super(idGioco,titolo,annodiPubblicazione,averageLenghtOfAMatch );
         this.numGiocatori=numGiocatori;
         this.averageLenghtOfAMatch=averageLenghtOfAMatch;
     }
