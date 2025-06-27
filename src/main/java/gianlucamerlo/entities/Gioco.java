@@ -1,25 +1,29 @@
 package gianlucamerlo.entities;
 
 public abstract class Gioco {
-    private String idGioco;
-    private String Titolo;
+    private final int idGioco;
+    private String titolo;
     private int annoDiPubblicazione;
     private int price;
 
-    public String getIdGioco() {
+
+    public Gioco(final int idGioco,String titolo, int annoDiPubblicazione,int price){
+        this.idGioco=idGioco;
+        this.titolo=titolo;
+        this.annoDiPubblicazione=annoDiPubblicazione;
+        this.price=price;
+    }
+
+    public int getIdGioco() {
         return idGioco;
     }
 
-    public void setIdGioco(String idGioco) {
-        this.idGioco = idGioco;
-    }
-
     public String getTitolo() {
-        return Titolo;
+        return titolo;
     }
 
     public void setTitolo(String titolo) {
-        Titolo = titolo;
+        titolo = titolo;
     }
 
     public int getPrice() {
@@ -37,5 +41,15 @@ public abstract class Gioco {
 
     public void setAnnoDiPubblicazione(int annoDiPubblicazione) {
         this.annoDiPubblicazione = annoDiPubblicazione;
+    }
+
+    @Override
+    public String toString() {
+        return "Gioco{" +
+                "idGioco=" + idGioco +
+                ", titolo='" + titolo + '\'' +
+                ", annoDiPubblicazione=" + annoDiPubblicazione +
+                ", price=" + price +
+                '}';
     }
 }
